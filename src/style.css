@@ -30,10 +30,10 @@ body.theme-fantasy {
   --ui-accent-secondary: #22c55e;
   --ui-accent-tertiary: #a0a0a0;
   --info-panel-line-color: #6366f1;
-  --player-color: #fcd34d;
-  --ally-color-border: #22d3ee; --ally-color-fill: #0e7490;
-  --enemy-color-border: #ef4444; --enemy-color-fill: #b91c1c;
-  --object-color-border: #a0a0a0; --object-color-fill: #4a4a6a;
+  --dot-yellow-color: #fcd34d;
+  --dot-cyan-color: #22d3ee;
+  --dot-red-color: #ef4444;
+  --dot-gray-color: #a0a0a0;
 }
 
 body.theme-stone-cyan-dark {
@@ -50,10 +50,10 @@ body.theme-stone-cyan-dark {
   --ui-accent-secondary: #f59e0b;
   --ui-accent-tertiary: #a8a29e;
   --info-panel-line-color: #44403c;
-  --player-color: #f59e0b;
-  --ally-color-border: #4ade80; --ally-color-fill: #16a34a;
-  --enemy-color-border: #f87171; --enemy-color-fill: #dc2626;
-  --object-color-border: #a8a29e; --object-color-fill: #78716c;
+  --dot-yellow-color: #f59e0b;
+  --dot-cyan-color: #4ade80;
+  --dot-red-color: #f87171;
+  --dot-gray-color: #a8a29e;
 }
 
 body.theme-cyberpunk {
@@ -70,10 +70,10 @@ body.theme-cyberpunk {
   --ui-accent-secondary: #06b6d4;
   --ui-accent-tertiary: #9ca3af;
   --info-panel-line-color: #a855f7;
-  --player-color: #facc15;
-  --ally-color-border: #22d3ee; --ally-color-fill: #0e7490;
-  --enemy-color-border: #ef4444; --enemy-color-fill: #b91c1c;
-  --object-color-border: #9ca3af; --object-color-fill: #374151;
+  --dot-yellow-color: #facc15;
+  --dot-cyan-color: #22d3ee;
+  --dot-red-color: #ef4444;
+  --dot-gray-color: #9ca3af;
 }
 
 body.theme-horror {
@@ -90,10 +90,10 @@ body.theme-horror {
   --ui-accent-secondary: #4b5563;
   --ui-accent-tertiary: #9ca3af;
   --info-panel-line-color: #b91c1c;
-  --player-color: #f87171;
-  --ally-color-border: #0891b2; --ally-color-fill: #164e63;
-  --enemy-color-border: #dc2626; --enemy-color-fill: #7f1d1d;
-  --object-color-border: #9ca3af; --object-color-fill: #374151;
+  --dot-yellow-color: #f87171;
+  --dot-cyan-color: #0891b2;
+  --dot-red-color: #dc2626;
+  --dot-gray-color: #9ca3af;
 }
 
 body.theme-modern {
@@ -110,10 +110,10 @@ body.theme-modern {
   --ui-accent-secondary: #10b981;
   --ui-accent-tertiary: #6b7280;
   --info-panel-line-color: #d1d5db;
-  --player-color: #f59e0b;
-  --ally-color-border: #06b6d4; --ally-color-fill: #0e7490;
-  --enemy-color-border: #ef4444; --enemy-color-fill: #b91c1c;
-  --object-color-border: #6b7280; --object-color-fill: #374151;
+  --dot-yellow-color: #f59e0b;
+  --dot-cyan-color: #06b6d4;
+  --dot-red-color: #ef4444;
+  --dot-gray-color: #6b7280;
 }
 
 body.theme-cyberpunk-dark {
@@ -130,10 +130,10 @@ body.theme-cyberpunk-dark {
   --ui-accent-secondary: #00E5FF;
   --ui-accent-tertiary: #9E9E9E;
   --info-panel-line-color: #303F9F;
-  --player-color: #76FF03;
-  --ally-color-border: #00B0FF; --ally-color-fill: #40C4FF;
-  --enemy-color-border: #F50057; --enemy-color-fill: #FF4081;
-  --object-color-border: #9E9E9E; --object-color-fill: #616161;
+  --dot-yellow-color: #76FF03;
+  --dot-cyan-color: #00B0FF;
+  --dot-red-color: #F50057;
+  --dot-gray-color: #9E9E9E;
 }
 
 body.theme-material-dark {
@@ -150,10 +150,10 @@ body.theme-material-dark {
   --ui-accent-secondary: #E91E63;
   --ui-accent-tertiary: #BDBDBD;
   --info-panel-line-color: #424242;
-  --player-color: #FFD700;
-  --ally-color-border: #00BCD4; --ally-color-fill: #00838F;
-  --enemy-color-border: #EF4444; --enemy-color-fill: #C62828;
-  --object-color-border: #9CA3AF; --object-color-fill: #455A64;
+  --dot-yellow-color: #FFD700;
+  --dot-cyan-color: #00BCD4;
+  --dot-red-color: #EF4444;
+  --dot-gray-color: #9CA3AF;
 }
 
 body.theme-material-light {
@@ -170,8 +170,128 @@ body.theme-material-light {
   --ui-accent-secondary: #FF4081;
   --ui-accent-tertiary: #757575;
   --info-panel-line-color: #E0E0E0;
-  --player-color: #FFC107;
-  --ally-color-border: #00BCD4; --ally-color-fill: #4DD0E1;
-  --enemy-color-border: #f44336; --enemy-color-fill: #E57373;
-  --object-color-border: #9E9E9E; --object-color-fill: #BDBDBD;
+  --dot-yellow-color: #FFC107;
+  --dot-cyan-color: #00BCD4;
+  --dot-red-color: #f44336;
+  --dot-gray-color: #9E9E9E;
+}
+
+/* Shine Animation for Info Panel Loading */
+.info-panel-line.loading-shine {
+    background-size: 200% 100%;
+    background-image: linear-gradient(90deg, 
+        var(--ui-accent-secondary), 
+        var(--ui-accent-primary), 
+        var(--ui-accent-secondary)
+    );
+    animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}
+
+.codex-player-item::before,
+.codex-player-item::after {
+    content: none !important;
+    display: none !important;
+}
+
+.hud-entity-item {
+    border: 1px solid var(--ui-accent-secondary);
+    background-color: color-mix(in srgb, var(--ui-accent-secondary) 10%, transparent);
+}
+
+.hud-asset-item {
+    border: 1px dashed var(--ui-accent-tertiary);
+    background-color: color-mix(in srgb, var(--ui-accent-tertiary) 10%, transparent);
+}
+
+/* --- Codex Card Design (Based on Design 6) --- */
+.d6-card {
+    background-color: var(--bg-panel, #292524);
+    border: 1px solid var(--border-color, #44403c);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease-in-out, transform 0.3s ease-out;
+}
+.d6-card:hover {
+    border-color: #78716c;
+}
+.d6-summary {
+    list-style: none;
+    cursor: pointer;
+}
+.d6-summary::-webkit-details-marker { 
+    display: none; 
+}
+.d6-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.d6-name { 
+    font-size: 1.125rem; 
+    font-weight: 600; 
+    color: var(--text-color-primary, #e7e5e4); 
+}
+.d6-type { 
+    font-size: 0.75rem; 
+    color: var(--text-color-secondary, #a8a29e); 
+    text-transform: uppercase; 
+    flex-shrink: 0;
+    padding-left: 0.5rem; /* Add some space between name and type */
+}
+.d6-desc {
+    padding-top: 0.25rem;
+    /* margin-top and padding-top removed to reduce space */
+    font-size: 0.875rem;
+    color: var(--text-color-secondary, #a8a29e);
+}
+
+/* Style for the main player card to make it stand out */
+.main-player-card {
+    background-color: color-mix(in srgb, var(--player-color, #f59e0b) 15%, var(--bg-panel, #292524));
+    border-color: var(--player-color, #f59e0b);
+}
+
+.d6-scale-container {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem; /* Reduced space above the scale */
+}
+
+.d6-scale-line {
+    width: 100%;
+    height: 2px;
+    background-color: #44403c;
+}
+
+.d6-dot {
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    border-radius: 1px;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.draggable-list-item {
+    transition: transform 0.3s ease-out;
+}
+
+.d6-dot.quantity {
+    background-color: var(--ui-accent-secondary);
+}
+
+.draggable-list-item {
+    transition: transform 0.3s ease-out;
 }
